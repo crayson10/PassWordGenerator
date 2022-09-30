@@ -8,11 +8,11 @@ var characterNum = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e",
 
 var upperChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-var upperNum = ["0","1","2","3","4","5","6","7","8","9"];
+var upperNum = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-var specialChars = ["!","@","#","$","%","^","&","*","+"];
+// var specialChars = ["!","@","#","$","%","^","&","*","+"];
 
-var upperSpecials = ["!","@","#","$","%","^","&","*","+"];
+// var upperSpecials = ["!","@","#","$","%","^","&","*","+"];
 
 //our global variable
 // function of password- need to make password defined 
@@ -27,7 +27,6 @@ function inputPassword() {
 
 generateBtn.addEventListener("click",inputPassword)
 
-
 function generatePassword(){
   //check length
   //prompt/confirm for types of characters
@@ -37,8 +36,6 @@ function generatePassword(){
   // var specials = confirm(" Would you like special characters in the password that is generated");
   //prompt user for length
 
-
-  
   //store the responses
 let password = '';
 
@@ -47,16 +44,13 @@ let password = '';
   console.log(num);
   // console.log(specials);
 
-  
 //based on the responses trim/build available pool of characters
 //build password letter by letter
 //generate random int within range of available chars length 
 //add char to result
 //do until length === desired password lengt
 //add event listener to generate button
-
-// _________________________________________________________________________
-  // YES Numbers | YES Uppercase | YES specials
+  // YES Numbers | YES Uppercase |
   if(num === true && whichCase === true){
   for(var i = 0; i <charLength; i++){
 
@@ -64,12 +58,9 @@ let password = '';
       console.log(charPick);
       password = password.toString() +charPick.toString();
       console.log(password);
-
-
-
     }
   }  
-//  NO Numbers | YES Uppercase | YES speicals
+//  NO Numbers | YES Uppercase |
     else if(num !== true && whichCase === true){
       for(var i = 0; i <charLength; i++){
 
@@ -77,12 +68,9 @@ let password = '';
       console.log(charPick);
       password = password.toString() +charPick.toString();
       console.log(password);
-
-
-
     }
   }
-//  YES numbers | NO Uppercase | YES speicals
+//  YES numbers | NO Uppercase | 
     else if(num === true && whichCase !== true){
       for(var i = 0; i <charLength; i++){
         
@@ -91,7 +79,7 @@ let password = '';
         password = password.toString() +charPick.toString();
         console.log(password);}
 }
-// NO Numbers | NO Uppercase | Yes speicals
+// NO Numbers | NO Uppercase |
     else if(num !== true && whichCase !== true){
       for(var i = 0; i <charLength; i++){
 
